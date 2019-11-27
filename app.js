@@ -14,11 +14,15 @@ function getWeatherJavaScript() {
     };
     xhttp.open("GET", url, true);
     xhttp.send();
+}
 
-    console.log(typeof document);
+function changeColourJavaScript() {
+    var test = document.getElementById("test-js");
+    test.classList.toggle("colour");
 }
 
 document.getElementById("get-weather-js").onclick = getWeatherJavaScript;
+document.getElementById("colour-js").onclick = changeColourJavaScript;
 
 
 // Test of JavaScript with jQuery
@@ -28,4 +32,9 @@ function getWeatherJQuery() {
     });
 }
 
+function changeColourJQuery() {
+    $("#test-jq").toggleClass("colour");
+}
+
 $("#get-weather-jq").click(getWeatherJQuery);
+$("#colour-jq").click(changeColourJQuery);
